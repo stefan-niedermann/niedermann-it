@@ -22,8 +22,8 @@
 }
 
 h3 {
-	line-height: 1em;
-	margin-top: 1.7em;
+	line-height: 1rem;
+	margin-top: 1.7rem;
 }
 
 img {
@@ -88,7 +88,7 @@ article::after {
 
 blockquote {
 	margin: auto;
-	padding: 1em;
+	padding: 1rem;
 	overflow: hidden;
 	font-size: small;
 }
@@ -129,7 +129,7 @@ cite::before {
 
 .notification-bar li {
 	border-bottom: 1px solid #221;
-	padding: .5em;
+	padding: .5rem;
 	background: #ff9;
 }
 
@@ -159,7 +159,7 @@ cite::before {
 }
 
 .header-menu ul li:first-child {
-	margin-left: 1em;
+	margin-left: 1rem;
 }
 
 .header-menu ul li a {
@@ -182,8 +182,8 @@ cite::before {
 
 .header-menu a.facebook {
 	position: absolute;
-	right: 1em;
-	top: .3em;
+	right: 1rem;
+	top: .3rem;
 	opacity: .4;
 	padding-right: 0;
 	background: none;
@@ -265,7 +265,7 @@ aside h2 {
 footer.page-footer {
 	clear: both;
 	text-align: center;
-	padding: .5em;
+	padding: .5rem;
 }
 
 footer.page-footer p {
@@ -286,7 +286,7 @@ main p {
 
 figure {
 	position: relative;
-	margin: .5em;
+	margin: .5rem;
 	background: #eee;
 }
 
@@ -299,8 +299,8 @@ figure figcaption {
 	background: rgba(0, 0, 0, 0.8);
 	border: 1px solid rgba(0, 0, 0, 0.8);
 	color: #fff;
-	margin: .5em 0 0;
-	padding: 1em;
+	margin: .5rem 0 0;
+	padding: 1rem;
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -310,8 +310,8 @@ figure figcaption strong {
 }
 
 #html5 {
-	width: 10em;
-	height: 10em;
+	width: 10rem;
+	height: 10rem;
 	opacity: .5;
 	transition: opacity 2s ease;
 }
@@ -333,8 +333,8 @@ footer:hover #html5 {
 	background-position: center center;
 	border-radius: 50%;
 	background-size: 70%;
-	height: 4em;
-	width: 4em;
+	height: 4rem;
+	width: 4rem;
 	display: inline-block;
 	box-shadow: 3px 3px 3px #666;
 }
@@ -359,7 +359,7 @@ footer:hover #html5 {
 		display: inline;
 	}
 	.header-menu ul li a {
-		padding: .5em;
+		padding: .5rem;
 		font-size: medium;
 	}
 }
@@ -380,7 +380,7 @@ footer:hover #html5 {
 		margin-left: 0;
 	}
 	.header-menu ul li a {
-		padding: .5em 1em;
+		padding: .5rem 1rem;
 	}
 	.header-menu ul li:first-child {
 		margin-left: inherit;
