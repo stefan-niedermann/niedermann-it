@@ -1,0 +1,9 @@
+main > p, main h2 {
+	margin: 1rem;
+}
+
+@media ( min-width : 980px) {
+	main > p, main h2 {
+		margin: auto;
+	}
+}

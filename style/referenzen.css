@@ -1,67 +1,33 @@
-.js figure {
-	display: none;
+main article .desc h1 {
+	font-size: medium;
 }
 
-.js figure.shown {
-	display: block;
-}
+@media ( min-width : 980px) {
+	main article::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
 
-.js main {
-	position: relative;
-}
+	main article img,
+	main article .desc {
+		width: 50%;
+		box-sizing: border-box;
+	}
 
-.js main a.gallery-button {
-	position: absolute;
-	top: 1em;
-	height: 100%;
-	height: -webkit-calc(100% - 2em);
-	height: calc(100% - 2em);
-	width: 50%;
-	width: -webkit-calc(50% - 1em);
-	width: calc(50% - 1em);
-	/* Hide the text. */
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	white-space: nowrap;
-	text-indent: 100%
-}
+	main article img {
+		float: left;
+		padding: 0 1rem 0 0;
+	}
+	main article:nth-child(2n) img {
+		float: right;
+		padding: 0 0 0 1rem;
+	}
 
-.js main a.gallery-button.prev {
-	left: 1em;
-}
-
-.js main a.gallery-button.next {
-	right: 1em;
-}
-
-.js main a.gallery-button.next::after, .js main a.gallery-button.prev::after
-	{
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 2em solid transparent;
-	border-bottom: 2em solid transparent;
-	top: 50%;
-	top: -webkit-calc(50% - 4em);
-	top: calc(50% - 4em);
-	position: absolute;
-}
-
-.js main a.gallery-button.next::after {
-	border-left: 2em solid rgba(0, 0, 0, .7);
-	right: 1em;
-}
-
-.js main a.gallery-button.prev::after {
-	border-right: 2em solid rgba(0, 0, 0, .7);
-	left: 1em;
-}
-
-@media ( min-width : 640px) {
-	.js main a.gallery-button.next::after, .js main a.gallery-button.prev::after
-		{
-		border-width: 4em;
+	main article .desc {
+		float: right;
+	}
+	main article:nth-child(2n) .desc {
+		float: left;
 	}
 }

@@ -11,8 +11,8 @@
 	-ms-hyphens: auto;
 	-moz-hyphens: auto;
 	-webkit-hyphens: auto;
-	word-wrap: break-word;
 	hyphens: auto;
+	word-wrap: break-word;
 	-webkit-appearance: none;
 }
 
@@ -49,15 +49,28 @@ a[target="_blank"] {
 body {
 	overflow-y: scroll;
 	background: #eee;
+	color: #333;
+}
+
+article, blockquote {
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	background: #fff;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+main article {
+	margin-top: 1rem;
 }
 
 blockquote {
 	margin: auto;
 	padding: .5em;
 	overflow: hidden;
-	-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+	/*-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-	border-left: 0.5em solid rgb(221, 221, 221);
+	border-left: 0.5em solid rgb(221, 221, 221);*/
+	font-size: small;
 }
 
 blockquote:before {
@@ -115,6 +128,7 @@ cite::before {
 }
 
 .header-menu ul {
+	background: #007676;
 	padding: 0;
 	margin: 0;
 }
@@ -131,20 +145,19 @@ cite::before {
 .header-menu ul li a {
 	padding: 10px 5px;
 	display: block;
-	color: #707070;
+	color: #ddd;
 	font-variant: small-caps;
 	font-weight: bold;
 	font-size: small;
 }
 
 .header-menu ul li a:hover {
-	color: #333;
+	color: #fff;
 	text-decoration: none;
 }
 
-.header-menu ul li.current_page_item a, ul.header-menu li.current-menu-item a
-	{
-	color: #333;
+.header-menu ul li.current_page_item a, ul.header-menu li.current-menu-item a {
+	color: #fff;
 }
 
 .header-menu a.facebook {
@@ -161,9 +174,9 @@ cite::before {
 	opacity: .7;
 }
 
-#wrapper {
+/*#wrapper {
 	background: #fff;
-}
+}*/
 
 .outer-header-container {
 	background: #fff;
@@ -184,6 +197,7 @@ cite::before {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: block;
+	padding: 1rem 0;
 }
 
 .page-header h1 {
@@ -199,16 +213,17 @@ cite::before {
 
 .page-nav {
 	clear: both;
-	border-top: 1px solid #aaa;
+	/*border-top: 1px solid #aaa;
 	border-bottom: 1px solid #aaa;
 	box-shadow: 2px 2px 2px #aaa;
-	background: #eee;
+	background: #eee;*/
+	background: #fff;
+	box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.25);
 	top: 0;
 	-webkit-position: sticky;
 	position: sticky;
 	z-index: 1;
 }
-
 .page-title {
 	display: inline-block;
 }
@@ -218,7 +233,7 @@ main, aside {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	padding: .5em;
+	/*padding: .5em;*/
 	line-height: 1.7;
 }
 
@@ -226,7 +241,8 @@ main, aside {
 	width: 100%;
 }
 
-aside>ul {
+aside > ul {
+	margin: 1rem;
 	padding: 0;
 	list-style: none;
 }
@@ -237,7 +253,6 @@ aside h2 {
 
 footer.page-footer {
 	clear: both;
-	border-top: 1px solid #aaa;
 	text-align: center;
 	padding: .5em;
 }
@@ -258,12 +273,6 @@ iframe {
 	width: 100%;
 	height: 300px;
 	border: 1px solid #aaa;
-}
-
-main img {
-	border: 1px solid #aaa;
-	display: block;
-	margin: auto;
 }
 
 main p {
@@ -298,6 +307,12 @@ figure figcaption strong {
 #html5 {
 	width: 10em;
 	height: 10em;
+	opacity: .5;
+	transition: opacity 2s ease;
+}
+
+footer:hover #html5 {
+	opacity: .9;
 }
 
 .graphic-container {
@@ -353,6 +368,9 @@ figure figcaption strong {
 		width: 40%;
 		float: right;
 	}
+	aside > ul {
+		margin-left: 0;
+	}
 	.header-menu ul li a {
 		padding: .5em 1em;
 	}
@@ -362,6 +380,9 @@ figure figcaption strong {
 	figure figcaption {
 		position: absolute;
 		bottom: 0;
+	}
+	article {
+		margin-top: 1rem;
 	}
 }
 
@@ -377,3 +398,21 @@ figure figcaption strong {
 	}
 }
 
+@media ( min-width : 980px) {
+	main {
+		padding: 1rem 0;
+	}
+	main article {
+		margin: 1rem 0 0 0;
+	}
+	main article:first-child,
+	main article:only-of-type {
+		margin: 0;
+	}
+	aside {
+		padding-left: 1rem;
+	}
+	aside > ul {
+		margin-right: 0;
+	}
+}
