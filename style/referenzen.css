@@ -1,0 +1,67 @@
+.js figure {
+	display: none;
+}
+
+.js figure.shown {
+	display: block;
+}
+
+.js main {
+	position: relative;
+}
+
+.js main a.gallery-button {
+	position: absolute;
+	top: 1em;
+	height: 100%;
+	height: -webkit-calc(100% - 2em);
+	height: calc(100% - 2em);
+	width: 50%;
+	width: -webkit-calc(50% - 1em);
+	width: calc(50% - 1em);
+	/* Hide the text. */
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%
+}
+
+.js main a.gallery-button.prev {
+	left: 1em;
+}
+
+.js main a.gallery-button.next {
+	right: 1em;
+}
+
+.js main a.gallery-button.next::after, .js main a.gallery-button.prev::after
+	{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 2em solid transparent;
+	border-bottom: 2em solid transparent;
+	top: 50%;
+	top: -webkit-calc(50% - 4em);
+	top: calc(50% - 4em);
+	position: absolute;
+}
+
+.js main a.gallery-button.next::after {
+	border-left: 2em solid rgba(0, 0, 0, .7);
+	right: 1em;
+}
+
+.js main a.gallery-button.prev::after {
+	border-right: 2em solid rgba(0, 0, 0, .7);
+	left: 1em;
+}
+
+@media ( min-width : 640px) {
+	.js main a.gallery-button.next::after, .js main a.gallery-button.prev::after
+		{
+		border-width: 4em;
+	}
+}
