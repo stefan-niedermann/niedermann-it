@@ -17,7 +17,7 @@
 }
 
 ::-moz-selection {
-	background: #205081;
+	background: #28344d;
 	color: #fff;
 }
 
@@ -46,6 +46,23 @@ a[target="_blank"] {
 		transparent;
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+a.button.primary {
+	background-color: #28344d;
+	color: #fff;
+}
+
 body {
 	overflow-y: scroll;
 	background: #eee;
@@ -63,13 +80,16 @@ main article {
 	margin-top: 1rem;
 }
 
+article::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 blockquote {
 	margin: auto;
 	padding: 1em;
 	overflow: hidden;
-	/*-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-	border-left: 0.5em solid rgb(221, 221, 221);*/
 	font-size: small;
 }
 
@@ -174,10 +194,6 @@ cite::before {
 	opacity: .7;
 }
 
-/*#wrapper {
-	background: #fff;
-}*/
-
 .outer-header-container {
 	background: #fff;
 }
@@ -213,10 +229,6 @@ cite::before {
 
 .page-nav {
 	clear: both;
-	/*border-top: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
-	box-shadow: 2px 2px 2px #aaa;
-	background: #eee;*/
 	background: #fff;
 	box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.25);
 	top: 0;
@@ -233,7 +245,6 @@ main, aside {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin: 0;
-	/*padding: .5em;*/
 	line-height: 1.7;
 }
 
@@ -267,12 +278,6 @@ footer.page-footer p.cr {
 	color: #ccc;
 	text-shadow: 0 -1px 1px #fff, 0 1px 1px #666;
 	font-size: x-large;
-}
-
-iframe {
-	width: 100%;
-	height: 300px;
-	border: 1px solid #aaa;
 }
 
 main p {
@@ -350,6 +355,9 @@ footer:hover #html5 {
 }
 
 @media ( min-width : 480px) {
+	a.button {
+		display: inline;
+	}
 	.header-menu ul li a {
 		padding: .5em;
 		font-size: medium;
