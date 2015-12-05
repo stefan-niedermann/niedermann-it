@@ -19,15 +19,8 @@ main article .desc h1 {
 		float: left;
 		padding: 0 1rem 0 0;
 	}
-	main article:nth-child(2n) img {
-		float: right;
-		padding: 0 0 0 1rem;
-	}
 
 	main article .desc {
 		float: right;
-	}
-	main article:nth-child(2n) .desc {
-		float: left;
 	}
 }
