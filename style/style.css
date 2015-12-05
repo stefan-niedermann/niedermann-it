@@ -65,7 +65,7 @@ main article {
 
 blockquote {
 	margin: auto;
-	padding: .5em;
+	padding: 1em;
 	overflow: hidden;
 	/*-webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
@@ -414,5 +414,9 @@ footer:hover #html5 {
 	}
 	aside > ul {
 		margin-right: 0;
+	}
+	.header-menu ul {
+		border-top-left-radius: 1px;
+		border-top-right-radius: 1px;
 	}
 }
