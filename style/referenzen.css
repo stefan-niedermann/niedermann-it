@@ -1,0 +1,26 @@
+main article .desc h1 {
+	font-size: medium;
+}
+
+@media ( min-width : 980px) {
+	main article::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	main article img,
+	main article .desc {
+		width: 50%;
+		box-sizing: border-box;
+	}
+
+	main article img {
+		float: left;
+		padding: 0 1rem 0 0;
+	}
+
+	main article .desc {
+		float: right;
+	}
+}
