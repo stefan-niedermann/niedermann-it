@@ -1,0 +1,14 @@
+stages:
+  - deploy
+
+deploy_job:
+  image: debian:stable-slim
+  stage: deploy
+  script:
+    - apt-get update
+    - apt-get --yes --force-yes install lftp
+    - rm .gitlab-ci.yml
+    - rm -rf .git
+    - lftp -u $FTP_PRODUCTION_USER,$FTP_PRODUCTION_PASSWORD -e "set ssl:verify-certificate no;mirror -R ./ $FTP_PRODUCTION_PATH-$CI_COMMIT_SHA; rm -r $FTP_PRODUCTION_PATH-alt; mv $FTP_PRODUCTION_PATH $FTP_PRODUCTION_PATH-alt; mv $FTP_PRODUCTION_PATH-$CI_COMMIT_SHA $FTP_PRODUCTION_PATH; quit;" $FTP_PRODUCTION_URL
+  only:
+    - master
