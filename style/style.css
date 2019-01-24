@@ -69,7 +69,7 @@ body {
 	color: #333;
 }
 
-article, blockquote {
+article, .container {
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
 	background: #fff;
 	padding: 1rem;
@@ -86,11 +86,15 @@ article::after {
 	clear: both;
 }
 
-blockquote {
+.container {
 	margin: auto;
 	padding: 1rem;
 	overflow: hidden;
 	font-size: small;
+}
+
+blockquote {
+	margin: auto;
 }
 
 blockquote:before {
@@ -200,7 +204,7 @@ cite::before {
 
 #content, .header-menu, .page-header {
 	width: 100%;
-	max-width: 980px;
+	max-width: 1280px;
 	margin: auto;
 }
 
@@ -260,7 +264,14 @@ aside > ul {
 
 aside h2 {
 	font-size: medium;
-	text-align: center;
+}
+
+aside img {
+	margin: auto;
+	margin-bottom: 1rem;
+	display: block;
+	max-width: 250px;
+	width: 100%;
 }
 
 footer.page-footer {

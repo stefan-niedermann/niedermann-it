@@ -1,19 +1,7 @@
 BEGIN:VCARD
-VERSION:2.1
-N:;;;;
-FN:
+N:Niedermann;Stefan;;;
+ADR;INTL;PARCEL;WORK:;;Rudelsdorfer Stra�e 38;Barthelmesaurach;Bayern;91126;Deutschland
+EMAIL;INTERNET:info@niedermann.it
 ORG:Niedermann IT-Dienstleistungen
-TEL;WORK;VOICE:+49 160 95868391
-ADR;WORK:;;Rudelsdorfer Straße 38;Barthelmesaurach;Bayern;91126;Deutschland
-LABEL;WORK;ENCODING=QUOTED-PRINTABLE:Niedermann IT-Dienstleistungen=0D=0A=
-=0D=0A=
- Rudelsdorfer Straße 38=0D=0A=
- 91126 Barthelmesaurach, Bayern, Deutschland
-ADR;HOME:;;;;;;Deutschland
-LABEL;HOME;ENCODING=QUOTED-PRINTABLE:=0D=0A=
-=0D=0A=
-, Deutschland
 URL;WORK:http://www.niedermann.it
-EMAIL;PREF;INTERNET:stefan.niedermann@googlemail.com
-REV:20151205T230511Z
 END:VCARD

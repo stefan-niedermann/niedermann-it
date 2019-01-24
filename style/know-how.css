@@ -1,3 +1,10 @@
 main > p, main h2 {
 	margin-top: 0;
 }
+
+.preview {
+	width: 30%;
+	float: right;
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+}
