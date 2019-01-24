@@ -2,9 +2,14 @@ main h2 {
 	margin-top: 0;
 }
 
-.preview {
-	width: 30%;
-	float: right;
-	margin-left: 1rem;
-	margin-bottom: 1rem;
+main ul {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main ul li {
+	flex: 1 0 30%;
+	margin: 10px;
 }
