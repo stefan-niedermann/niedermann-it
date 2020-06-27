@@ -10,7 +10,7 @@ deploy_job:
     - apt-get update
     - apt-get --yes --force-yes install imagemagick lftp
     - find ./resources/referenzen/ -name '*' -exec mogrify -resize 608x608 -quality 100\> {} \;
-    - find ./resources/know-how/ -name '*.png' -exec mogrify -resize 396x396 -quality 100\> {} \;
+    - find ./resources/know-how/ -name '*.png' -exec mogrify -resize 592x592 -quality 100\> {} \;
     - find ./resources/startseite/ -name '*.png' -exec mogrify -resize 864x864 -quality 100\> {} \;
     - lftp -u $FTP_PRODUCTION_USER,$FTP_PRODUCTION_PASSWORD -e "set ssl:verify-certificate no;mirror -R ./ $FTP_PRODUCTION_PATH-$CI_COMMIT_SHA; rm -r $FTP_PRODUCTION_PATH-alt; mv $FTP_PRODUCTION_PATH $FTP_PRODUCTION_PATH-alt; mv $FTP_PRODUCTION_PATH-$CI_COMMIT_SHA $FTP_PRODUCTION_PATH; quit;" $FTP_PRODUCTION_URL
   only:
