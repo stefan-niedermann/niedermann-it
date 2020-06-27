@@ -226,11 +226,6 @@ cite::before {
 	margin: 10px;
 }
 
-.page-description {
-	display: inline-block;
-	float: left;
-}
-
 .page-nav {
 	clear: both;
 	background: #fff;
