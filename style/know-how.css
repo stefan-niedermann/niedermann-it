@@ -34,15 +34,24 @@ main .graphic-container {
 		flex-wrap: wrap;
 	}
 	main article {
-		width: calc(50% - 3rem);
+		width: calc(50% - 3.5rem);
 	}
-	main article:nth-child(even) {
-		margin-left: 2rem;
+	main article:nth-child(2n) {
+		margin-left: 0;
 	}
 	main article a img {
 		max-height: 286px;
 		object-fit: cover;
 		width: 100%;
 		object-position: top;
+	}
+}
+
+@media (min-width: 980px) {
+	main article {
+		width: calc(50% - 2.5rem);
+	}
+	main article:nth-child(2n) {
+		margin-left: 1rem;
 	}
 }
