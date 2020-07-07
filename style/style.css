@@ -6,17 +6,20 @@
 }
 
 * {
-	font-family: "Open Sans", "Liberation Sans", sans-serif;
-	outline: none;
+	-webkit-appearance: none;
+}
+
+body {
+	margin: 0;
+	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 	-ms-hyphens: auto;
 	-moz-hyphens: auto;
 	-webkit-hyphens: auto;
 	hyphens: auto;
 	word-wrap: break-word;
-	-webkit-appearance: none;
 }
 
-::-moz-selection {
+::selection {
 	background: #28344d;
 	color: #fff;
 }
@@ -42,17 +45,16 @@ a:hover {
 
 a[target="_blank"] {
 	padding-right: 14px;
-	background: url("../resources/extern.png") no-repeat scroll 100% 60%
-		transparent;
+	background: url("../resources/extern.png") no-repeat scroll 100% 60% transparent;
 }
 
 a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    padding: .5rem 1rem;
-    border-radius: 2px;
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	border-radius: 2px;
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -184,20 +186,6 @@ cite::before {
 	color: #fff;
 }
 
-.header-menu a.facebook {
-	position: absolute;
-	right: 1rem;
-	top: .3rem;
-	opacity: .4;
-	padding-right: 0;
-	background: none;
-	display: none;
-}
-
-.header-menu a.facebook:hover {
-	opacity: .7;
-}
-
 .outer-header-container {
 	background: #fff;
 }
@@ -235,6 +223,7 @@ cite::before {
 	position: sticky;
 	z-index: 1;
 }
+
 .page-title {
 	display: inline-block;
 }
@@ -251,7 +240,7 @@ main, aside {
 	width: 100%;
 }
 
-aside > ul {
+aside>ul {
 	margin: 1rem;
 	padding: 0;
 	list-style: none;
@@ -355,13 +344,7 @@ footer:hover #html5 {
 	margin: auto;
 }
 
-@media ( min-width : 360px) {
-	.header-menu a.facebook {
-		display: block;
-	}
-}
-
-@media ( min-width : 480px) {
+@media ( min-width: 480px) {
 	a.button {
 		display: inline;
 	}
@@ -371,7 +354,7 @@ footer:hover #html5 {
 	}
 }
 
-@media ( min-width : 640px) {
+@media ( min-width: 640px) {
 	main.sidebar {
 		width: 60%;
 		float: left;
@@ -383,7 +366,7 @@ footer:hover #html5 {
 		width: 40%;
 		float: right;
 	}
-	aside > ul {
+	aside>ul {
 		margin-left: 0;
 	}
 	.header-menu ul li a {
@@ -401,7 +384,7 @@ footer:hover #html5 {
 	}
 }
 
-@media ( min-width : 800px) {
+@media ( min-width: 800px) {
 	main.sidebar {
 		width: 70%;
 	}
@@ -413,21 +396,20 @@ footer:hover #html5 {
 	}
 }
 
-@media ( min-width : 980px) {
+@media ( min-width: 980px) {
 	main {
 		padding: 1rem 0;
 	}
 	main article {
 		margin: 1rem 0 0 0;
 	}
-	main article:first-child,
-	main article:only-of-type {
+	main article:first-child, main article:only-of-type {
 		margin: 0;
 	}
 	aside {
 		padding-left: 1rem;
 	}
-	aside > ul {
+	aside>ul {
 		margin-right: 0;
 	}
 	.header-menu ul {
