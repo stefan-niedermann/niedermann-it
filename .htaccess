@@ -1,4 +1,4 @@
-# Header add Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://tracking.niedermann.it/; frame-src https://tracking.niedermann.it https://www.openstreetmap.org; frame-ancestors 'none'"
+Header add Content-Security-Policy "default-src 'self' https://tracking.niedermann.it; script-src 'self' 'unsafe-inline' https://tracking.niedermann.it; frame-src https://tracking.niedermann.it https://www.openstreetmap.org; frame-ancestors 'none'"
 Header add Strict-Transport-Security "max-age=63072000; includeSubDomains"
 Header add X-Frame-Options "DENY"
 Header add X-Content-Type-Options "nosniff"
