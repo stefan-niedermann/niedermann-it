@@ -127,22 +127,6 @@ cite::before {
 	clear: both;
 }
 
-.notification-bar {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.notification-bar li {
-	border-bottom: 1px solid #221;
-	padding: .5rem;
-	background: #ff9;
-}
-
-.notification-bar li a {
-	text-decoration: underline;
-}
-
 .header-menu {
 	position: relative;
 }
