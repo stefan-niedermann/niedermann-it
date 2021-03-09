@@ -2,7 +2,7 @@ stages:
   - deploy
 
 deploy_job:
-  image: ubuntu:stable
+  image: debian:stable
   stage: deploy
   script:
     - rm .gitlab-ci.yml
