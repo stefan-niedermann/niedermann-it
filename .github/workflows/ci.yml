@@ -1,0 +1,28 @@
+name: CI pipeline
+
+on: [ push, pull_request ]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [unit, e2e, build]
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt-get install imagemagick lftp
+      - name: Compress images
+        run: |
+          find ./resources/referenzen/ -name '*' -exec mogrify -resize 608x608 -quality 99\> {} \;
+          find ./resources/know-how/ -name '*.png' -exec mogrify -resize 600x600 -quality 99\> {} \;
+          find ./resources/startseite/ -name '*.png' -exec mogrify -resize 864x864 -quality 99\> {} \;
+          find ./resources/stefan-niedermann.jpg -exec mogrify -resize 344x344 -quality 99\> {} \;
+      - name: Remove unnecessary files
+        run: rm -r .github .git
+      - name: Pull .well-known
+        continue-on-error: true
+        run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror .well-known ./; quit;" ${{ secrets.FTP_URL }}
+      - name: Deploy new bundle
+        run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror --reverse --delete --use-cache --verbose --allow-suid --no-umask --parallel=10; quit;" ${{ secrets.FTP_URL }}
