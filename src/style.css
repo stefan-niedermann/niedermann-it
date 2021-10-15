@@ -16,7 +16,6 @@ body {
 	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 	word-wrap: break-word;
 	-ms-hyphens: auto;
-	-moz-hyphens: auto;
 	-webkit-hyphens: auto;
 	hyphens: auto;
 	line-height: 1.75;
@@ -64,6 +63,7 @@ h1, h2, h3 {
 h2 {
 	text-align: center;
 	font-size: xx-large;
+	margin-bottom: 2rem;
 }
 
 h3 {
@@ -95,9 +95,13 @@ cite::before {
     white-space: pre;
 }
 
+ul {
+	padding-left: 1rem;
+}
+
 section {
-	padding: 2rem;
-	margin-bottom: 4rem;
+	--section-padding: 2rem;
+	padding: var(--section-padding);
 }
 
 /**********************************************************************************/
@@ -142,11 +146,21 @@ header a:active {
 /**********************************************************************************/
 
 section.know-how {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+section.know-how h2 {
+	margin-bottom: 0;
+}
+
+section.know-how div {
 	display: flex;
 	column-gap: 2rem;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
+	padding: var(--section-padding);
 }
 
 section.know-how article {
@@ -180,7 +194,7 @@ section.know-how img {
 }
 
 @media (min-width: 800px) {
-	section.know-how {
+	section.know-how div {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
@@ -192,7 +206,7 @@ section.know-how img {
 }
 
 @media (min-width: 1360px) {
-	section.know-how {
+	section.know-how div {
 		max-width: var(--max-width-container);
 		margin: auto;
 	}
@@ -220,11 +234,21 @@ section.kundenmeinungen {
 /**********************************************************************************/
 
 section.referenzen {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+section.referenzen h2 {
+	margin-bottom: 0;
+}
+
+section.referenzen div {
 	display: flex;
 	column-gap: 2rem;
 	overflow: auto;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
+	padding: var(--section-padding);
 }
 
 section.referenzen article {
@@ -254,6 +278,7 @@ section.referenzen h3 {
 }
 
 section.referenzen img {
+	background-color: var(--background-color-emphasized);
 	width: calc(100% + var(--padding-horizontal) * 2);
 	margin: 0 calc(var(--padding-horizontal) * -1);
 	object-fit: cover;
@@ -284,28 +309,37 @@ section.about img {
 	section.about {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	section.about h2 {
+		flex: 1 0 100%;
 	}
 
 	section.about img {
 		margin-bottom: 0;
 	}
+
+	section.about blockquote {
+		flex: 1 1 0;
+	}
 }
 
 /**********************************************************************************/
-/* Imprint                                                                        */
+/* Footer                                                                         */
 /**********************************************************************************/
 
-section.imprint p,
-section.imprint address {
+footer p,
+footer address {
 	text-align: center;
 	color: #999;
 }
 
-section.imprint p {
+footer p {
 	margin-top: 7rem;
 }
 
-section.imprint address {
+footer address {
 	margin-bottom: 3rem;
 	font-style: normal;
 }
