@@ -27,7 +27,7 @@ body {
 	body {
 		--background-color: #111;
 		--background-color-accent: #00b4b4;
-		--background-color-emphasized: #1c1c1c;
+		--background-color-emphasized: #202020;
 		--color: #eee;
 		--color-accent: #205081;
 		--border-color: var(--background-color-emphasized);
