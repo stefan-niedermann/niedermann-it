@@ -416,11 +416,16 @@ footer address {
 		display: block;
 	}
 
-	footer dd:last-child {
-		flex: 0 0 auto;
+	footer dt:nth-of-type(2) {
+		order: 1;
 	}
 
-	footer dd:last-child::after {
+	footer dd:nth-of-type(2) {
+		flex: 0 0 auto;
+		order: 2;
+	}
+
+	footer dd:nth-of-type(2)::after {
 		display: none;
 	}
 }
