@@ -11,7 +11,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: sudo apt-get install imagemagick lftp
+        run: |
+          sudo apt-get install imagemagick lftp
+          sudo npm i -g minify
+      - name: Minify HTML and CSS
+        run: |
+          minify src/index.html
+          minify src/style.css
       - name: Compress images
         run: |
           find src/assets/referenzen/ -name '*' -exec mogrify -resize 250x250 -quality 95\> {} \;
