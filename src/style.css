@@ -1,7 +1,7 @@
 body {
-	--background-color: white;
+	--background-color: #f5f5f5;
 	--background-color-accent: #205081;
-	--background-color-emphasized: #fafafa;
+	--background-color-emphasized: white;
 	--background-color-selection: #007676;
 	--color-selection: white;
 	--color: #333;
@@ -10,7 +10,7 @@ body {
 	--icon-black: 40%;
 	--box-shadow-cards: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
 
-	--max-width-container: 1360px;
+	--max-width-container: 1440px;
 
 	margin: 0;
 	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
@@ -28,7 +28,7 @@ body {
 		--background-color: #222;
 		--background-color-accent: #00b4b4;
 		--background-color-emphasized: #333;
-		--color: white;
+		--color: #eee;
 		--color-accent: #205081;
 		--border-color: #333;
 		--icon-black: 60%;
@@ -113,12 +113,14 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 6rem;
+	padding-bottom: 4rem;
 	box-sizing: border-box;
+	background-color: var(--background-color-emphasized);
+	box-shadow: var(--box-shadow-cards);
 }
 
 header h1 {
-	margin-bottom: 5rem;
+	margin-bottom: 7rem;
 	text-align: center;
 	flex: 1 1 auto;
 }
@@ -169,7 +171,7 @@ section.know-how article {
 	flex: 0 0 min(30rem, calc(100% - 5rem));
 	display: flex;
 	flex-direction: column;
-	background-color: var(--background-color);
+	background-color: var(--background-color-emphasized);
 	box-shadow: var(--box-shadow-cards);
 	padding: var(--padding-horizontal) var(--padding-horizontal);
 	overflow: hidden;
@@ -193,28 +195,17 @@ section.know-how img {
 	margin: 0 auto 1rem auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1440px) {
 	section.know-how div {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2rem;
-	}
-
-	section.know-how article {
-		flex: 0 0 calc(50% - 4rem);
-	}
-}
-
-@media (min-width: 1360px) {
-	section.know-how div {
 		max-width: var(--max-width-container);
 		margin: auto;
 	}
 
 	section.know-how article {
-		flex: 0 0 calc(25% - 2rem);
-		padding: 0;
-		box-shadow: none;
+		flex: 0 0 calc(100% / 3 - 4.5rem);
 	}
 }
 
@@ -257,7 +248,7 @@ section.referenzen article {
 	flex: 0 0 min(30rem, calc(100% - 5rem));
 	display: flex;
 	flex-direction: column;
-	background-color: var(--background-color);
+	background-color: var(--background-color-emphasized);
 	box-shadow: var(--box-shadow-cards);
 	padding: var(--padding-horizontal) var(--padding-horizontal);
 	overflow: hidden;
