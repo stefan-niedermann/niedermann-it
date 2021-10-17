@@ -381,6 +381,8 @@ footer code {
 	padding: .5rem 1rem;
 	box-shadow: var(--box-shadow-cards);
 	border-radius: .1rem;
+	-webkit-user-select: all;
+	user-select: all;
 }
 
 footer address {
