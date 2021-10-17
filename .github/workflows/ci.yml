@@ -20,4 +20,4 @@ jobs:
         continue-on-error: true
         run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror .well-known src; quit;" ${{ secrets.FTP_URL }}
       - name: Deploy new bundle
-        run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror src --reverse --delete --use-cache --verbose --allow-suid --no-umask --parallel=10; quit;" ${{ secrets.FTP_URL }}
+        run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror src . --reverse --delete --use-cache --verbose --allow-suid --no-umask --parallel=10; quit;" ${{ secrets.FTP_URL }}
