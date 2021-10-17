@@ -7,7 +7,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    sodipodi:docname="Niedermann-IT-Dienstleistungen.svg"
-   width="545"
+   width="190"
    height="100">
 	<metadata>
 		<rdf:RDF>
@@ -42,6 +42,7 @@
 		stroke-width="0"
 		fill="#232323"
 	/>
+	<!-- Text -->
 	<text
 		style="cursor: text;"
 		xml:space="preserve"
@@ -66,38 +67,4 @@
 		stroke-width="0"
 		fill="#007877"
 	/>
-	<!-- NIEDERMANN -->
-	<text
-		style="cursor: text;"
-		xml:space="preserve"
-		text-anchor="middle"
-		font-size="50"
-		y="50"
-		x="367.5"
-		font-family="Helvetica, Arial, sans-serif"
-		stroke-width="0"
-		stroke="#000"
-		fill="#000000">NIEDERMANN</text>
-	<!-- Trennlinie -->
-	<line
-		x1="200"
-		y1="60"
-		x2="535"
-		y2="60"
-		stroke-width="2"
-		stroke="#000"
-		fill="none" />
-	<!-- IT-DIENSTLEISTUNGEN -->
-	<text
-		style="cursor: text;"
-		xml:space="preserve"
-		text-anchor="middle"
-		font-size="29.7"
-		x="367.5"
-		y="90"
-		stroke-opacity="null"
-		font-family="Helvetica, Arial, sans-serif"
-		stroke-width="0"
-		stroke="#000"
-		fill="#000000">IT-DIENSTLEISTUNGEN</text>
 </svg>
