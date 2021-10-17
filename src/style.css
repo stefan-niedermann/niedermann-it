@@ -25,12 +25,12 @@ body {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		--background-color: #222;
+		--background-color: #111;
 		--background-color-accent: #00b4b4;
-		--background-color-emphasized: #333;
+		--background-color-emphasized: #1c1c1c;
 		--color: #eee;
 		--color-accent: #205081;
-		--border-color: #333;
+		--border-color: var(--background-color-emphasized);
 		--icon-black: 60%;
 		--box-shadow-cards: none;
 	}
@@ -52,7 +52,7 @@ a {
 	color: var(--background-color-accent);
 }
 
-a:not(.btn):hover {
+a:hover {
 	text-decoration: underline;
 }
 
@@ -68,6 +68,14 @@ h2 {
 
 h3 {
 	margin-top: 0;
+}
+
+dd {
+	margin: 0;
+}
+
+dt::after {
+	content: ":";
 }
 
 blockquote {
@@ -285,6 +293,10 @@ section.about {
 	margin: auto;
 }
 
+section.about figure {
+	margin: 0;
+}
+
 section.about img {
 	border-radius: 50%;
 	width: 15rem;
@@ -307,6 +319,10 @@ section.about img {
 		flex: 1 0 100%;
 	}
 
+	section.about figure {
+		margin-right: 2rem;
+	}
+
 	section.about img {
 		margin-bottom: 0;
 	}
@@ -321,16 +337,90 @@ section.about img {
 /**********************************************************************************/
 
 footer p,
-footer address {
+footer address,
+footer dl {
 	text-align: center;
 	color: #999;
 }
 
-footer p {
+footer h2 {
+	font-size: medium;
 	margin-top: 7rem;
+	margin-bottom: 0;
+}
+
+footer h2 + p {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+footer dl {
+	margin-bottom: 5rem;
+}
+
+footer dd {
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+footer a[download] {
+	border: 1px solid var(--border-color);
+	padding: .75rem 2rem;
+	color: var(--color-selection);
+	background-color: var(--background-color-selection);
+	border-radius: .1rem;
+}
+
+footer a[download]:hover {
+	text-decoration: none;
+}
+
+footer code {
+	display: inline-block;
+	background: var(--background-color-emphasized);
+	padding: .5rem 1rem;
+	box-shadow: var(--box-shadow-cards);
+	border-radius: .1rem;
 }
 
 footer address {
 	margin-bottom: 3rem;
 	font-style: normal;
+}
+
+@media (min-width: 1024px) {
+	footer dl {
+		max-width: var(--max-width-container);
+		padding: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+		gap: 1rem;
+	}
+
+	footer dt {
+		flex: 0 0 auto;
+	}
+
+	footer dd {
+		flex: 1 0 auto;
+		white-space: nowrap;
+		margin: 0;
+		display: flex;
+	}
+
+	footer dd::after {
+		content: "";
+		display: block;
+	}
+
+	footer dd:last-child {
+		flex: 0 0 auto;
+	}
+
+	footer dd:last-child::after {
+		display: none;
+	}
 }
