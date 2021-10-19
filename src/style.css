@@ -140,9 +140,10 @@ header h1 {
 }
 
 header img {
+	/* See source code of the SVG graphic */
+	--aspect-ratio: calc(100 / 190);
 	--target-image-width: 29rem;
 	--max-image-width: 100vw;
-	--aspect-ratio: calc(100 / 190);
 
 	width: var(--target-image-width);
 	height: calc(var(--target-image-width) * var(--aspect-ratio));
@@ -187,6 +188,7 @@ section.know-how div {
 
 section.know-how article {
 	--padding-horizontal: 1.5rem;
+
     scroll-snap-align: center;
 	flex: 0 0 min(30rem, calc(100% - 5rem));
 	display: flex;
@@ -265,6 +267,7 @@ section.referenzen div {
 
 section.referenzen article {
 	--padding-horizontal: 1.5rem;
+	
     scroll-snap-align: center;
 	flex: 0 0 min(30rem, calc(100% - 5rem));
 	display: flex;
