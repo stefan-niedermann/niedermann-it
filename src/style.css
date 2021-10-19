@@ -1,4 +1,4 @@
-body {
+html {
 	--background-color: #f5f5f5;
 	--background-color-accent: #205081;
 	--background-color-emphasized: white;
@@ -9,9 +9,29 @@ body {
 	--border-color: #ccc;
 	--icon-black: 40%;
 	--box-shadow-cards: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+	--scrollbar-thumb-color: var(--border-color);
 
 	--max-width-container: 1440px;
 
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-thumb-color) var(--background-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		--background-color: #111;
+		--background-color-accent: #00b4b4;
+		--background-color-emphasized: #202020;
+		--color: #eee;
+		--color-accent: #205081;
+		--border-color: var(--background-color-emphasized);
+		--icon-black: 60%;
+		--box-shadow-cards: none;
+		--scrollbar-thumb-color: #2f2f2f;
+	}
+}
+
+body {
 	margin: 0;
 	font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 	word-wrap: break-word;
@@ -21,19 +41,6 @@ body {
 	line-height: 1.75;
 	background: var(--background-color);
 	color: var(--color);
-}
-
-@media (prefers-color-scheme: dark) {
-	body {
-		--background-color: #111;
-		--background-color-accent: #00b4b4;
-		--background-color-emphasized: #202020;
-		--color: #eee;
-		--color-accent: #205081;
-		--border-color: var(--background-color-emphasized);
-		--icon-black: 60%;
-		--box-shadow-cards: none;
-	}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -267,7 +274,7 @@ section.referenzen div {
 
 section.referenzen article {
 	--padding-horizontal: 1.5rem;
-	
+
     scroll-snap-align: center;
 	flex: 0 0 min(30rem, calc(100% - 5rem));
 	display: flex;
