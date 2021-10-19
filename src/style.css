@@ -205,6 +205,7 @@ section.know-how h3 {
 section.know-how img {
 	filter: invert(var(--icon-black));
 	width: 4rem;
+	height: 4rem;
 	display: block;
 	margin: 0 auto 1rem auto;
 }
