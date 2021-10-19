@@ -14,8 +14,8 @@ jobs:
         run: sudo apt-get install imagemagick lftp
       - name: Compress images
         run: |
-          find src/assets/referenzen/ -name '*' -exec mogrify -resize 250x250 -quality 95\> {} \;
-          find src/assets/stefan-niedermann.jpg -exec mogrify -resize 240x240 -quality 95\> {} \;
+          find src/assets/referenzen/ -name '*' -exec mogrify -resize 528x528 -quality 95\> {} \;
+          find src/assets/stefan-niedermann.jpg -exec mogrify -resize 331x331 -quality 95\> {} \;
       - name: Pull .well-known
         continue-on-error: true
         run: lftp -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror .well-known src; quit;" ${{ secrets.FTP_URL }}
