@@ -134,8 +134,14 @@ header h1 {
 }
 
 header img {
-	width: 29rem;
-	max-width: 100%;
+	--target-image-width: 29rem;
+	--max-image-width: 100vw;
+	--aspect-ratio: calc(100 / 190);
+
+	width: var(--target-image-width);
+	height: calc(var(--target-image-width) * var(--aspect-ratio));
+	max-width: var(--max-image-width);
+	max-height: calc(var(--max-image-width) * var(--aspect-ratio));
 	margin: 10vh auto 0 auto;
 	display: block;
 }
