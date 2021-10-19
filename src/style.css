@@ -284,11 +284,12 @@ section.referenzen h3 {
 }
 
 section.referenzen img {
+	margin: 0 calc(var(--padding-horizontal) * -1);
 	background-color: var(--background-color-emphasized);
 	width: calc(100% + var(--padding-horizontal) * 2);
-	margin: 0 calc(var(--padding-horizontal) * -1);
-	object-fit: cover;
 	height: 25vh;
+	object-fit: cover;
+	text-align: center;
 }
 
 /**********************************************************************************/
