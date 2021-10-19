@@ -112,6 +112,12 @@ section {
 	padding: var(--section-padding);
 }
 
+img {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /**********************************************************************************/
 /* Header                                                                         */
 /**********************************************************************************/
@@ -289,7 +295,6 @@ section.referenzen img {
 	width: calc(100% + var(--padding-horizontal) * 2);
 	height: 25vh;
 	object-fit: cover;
-	text-align: center;
 }
 
 /**********************************************************************************/
@@ -313,7 +318,6 @@ section.about img {
 	object-position: top;
 	margin: auto;
 	margin-bottom: 2rem;
-	display: block;
 }
 
 @media (min-width: 800px) {
