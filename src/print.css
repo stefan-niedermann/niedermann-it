@@ -1,0 +1,30 @@
+html {
+	--background-color: white !important;
+	--background-color-accent: #ccc !important;
+	--background-color-emphasized: #eee !important;
+	--background-color-tag: #e5e5e5 !important;
+	--background-color-selection: #007676;
+	--color-selection: white;
+	--color: #000 !important;
+	--color-accent: white !important;
+	--border-color: white !important;
+	--icon-black: 40%;
+	--box-shadow-cards: none !important;
+
+	--max-width-container: 100vw;
+}
+
+
+section.know-how div,
+section.referenzen div {
+    flex-wrap: wrap !important;
+}
+
+section.know-how article,
+section.referenzen article {
+	flex: 0 0 100% !important;
+}
+
+a::after {
+    content: " (" attr(href) ")"
+}
