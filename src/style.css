@@ -407,7 +407,7 @@ footer dd {
 	margin-bottom: 3rem;
 }
 
-footer a[download] {
+footer dd a {
 	border: 1px solid var(--border-color);
 	padding: .75rem 2rem;
 	color: var(--color-selection);
@@ -415,7 +415,7 @@ footer a[download] {
 	border-radius: var(--border-radius);
 }
 
-footer a[download]:hover {
+footer dd a:hover {
 	text-decoration: none;
 }
 
