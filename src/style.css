@@ -128,6 +128,16 @@ img {
     align-items: center;
 }
 
+a.btn {
+	background-color: var(--background-color-selection);
+	padding: .75rem 2rem;
+	color: var(--color-selection);
+	border-radius: .5rem;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+}
+
 ul.tags {
 	display: inline-flex;
 	gap: .5rem;
@@ -377,6 +387,74 @@ section.about img {
 }
 
 /**********************************************************************************/
+/* Donate                                                                         */
+/**********************************************************************************/
+
+section.donate {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+section.donate h2 {
+	margin-bottom: 0;
+}
+
+section.donate div {
+	display: flex;
+	column-gap: 2rem;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+	padding: var(--section-padding);
+}
+
+section.donate article {
+	--padding-horizontal: 1.5rem;
+
+    scroll-snap-align: center;
+	flex: 0 0 min(30rem, calc(100% - 5rem));
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-color-emphasized);
+	box-shadow: var(--box-shadow-cards);
+	padding: var(--padding-horizontal) var(--padding-horizontal);
+	overflow: hidden;
+	border-radius: var(--border-radius);
+}
+
+@media (prefers-color-scheme: dark) {
+	section.donate article {
+		background-color: var(--background-color-emphasized);
+	}
+}
+
+section.donate h3 {
+	text-align: center;
+}
+
+section.donate img {
+	filter: invert(var(--icon-black));
+	width: 4rem;
+	height: 4rem;
+	display: block;
+	margin: 0 auto 1rem auto;
+}
+
+@media (min-width: 1440px) {
+	section.donate div {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		max-width: var(--max-width-container);
+		margin: auto;
+	}
+
+	section.donate article {
+		flex: 0 0 calc(100% / 3 - 4.5rem);
+	}
+}
+
+/**********************************************************************************/
 /* Footer                                                                         */
 /**********************************************************************************/
 
@@ -405,14 +483,6 @@ footer dl {
 footer dd {
 	margin-top: 1rem;
 	margin-bottom: 3rem;
-}
-
-footer dd a {
-	border: 1px solid var(--border-color);
-	padding: .75rem 2rem;
-	color: var(--color-selection);
-	background-color: var(--background-color-selection);
-	border-radius: var(--border-radius);
 }
 
 footer dd a:hover {
